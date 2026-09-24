@@ -15,7 +15,8 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      # runtime dist is required before adapters (and workspace) tests resolve @phantominfra/runtime
+      - run: npm run build -w @phantominfra/runtime
       - run: npm test
       - run: npm run build
       - run: npm run bench -w @phantominfra/runtime
-      - run: npm run test -w @phantominfra/edge

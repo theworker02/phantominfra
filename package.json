@@ -13,7 +13,7 @@
     "build": "npm run build -w @phantominfra/runtime && npm run build -w @phantominfra/sdk && npm run build -w @phantominfra/adapters && npm run build -w @phantominfra/web && npm run check -w @phantominfra/edge",
     "demo": "npm run demo -w @phantominfra/runtime",
     "bench": "npm run bench -w @phantominfra/runtime",
-    "test": "npm run test -w @phantominfra/runtime && npm run test -w @phantominfra/edge && npm run test -w @phantominfra/adapters",
+    "test": "npm run build -w @phantominfra/runtime && npm run test -w @phantominfra/runtime && npm run test -w @phantominfra/edge && npm run test -w @phantominfra/adapters",
     "deploy:edge": "npm run deploy -w @phantominfra/edge"
   },
   "engines": {
