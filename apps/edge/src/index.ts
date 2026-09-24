@@ -630,7 +630,7 @@ export default {
         const stats = await globalPredictorStats(env.PREDICTOR_KV);
         const proof = await runHitMissProof({ rounds: 4, coldPathDelayMs: 120 });
         const savedPerHit = Math.max(0, proof.miss.avgMs - proof.hit.avgMs);
-        const estHits = stats.totalConfirms ?? 0;
+        const estHits = stats?.totalConfirms ?? 0;
         const estimatedSavedMs = Number((estHits * savedPerHit).toFixed(2));
         const usdPerCpuHour = 0.5;
         const estimatedValueUsd = Number(
@@ -639,13 +639,13 @@ export default {
         return json({
           ok: true,
           generatedAt: new Date().toISOString(),
-          version: "1.4.1",
+          version: "1.4.2",
           liveProof: {
             hitAvgMs: proof.hit.avgMs,
             missAvgMs: proof.miss.avgMs,
             speedup: proof.speedup,
           },
-          mesh: stats,
+          mesh: stats ?? { totalConfirms: 0, routes: 0 },
           estimatedSavedMs,
           estimatedValueUsd,
           assumptions: {
