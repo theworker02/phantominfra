@@ -15,7 +15,6 @@
   <a href=".github/FUNDING.yml"><img src="https://img.shields.io/badge/thanks.dev-theworker02-4a5a6a?style=flat-square" alt="thanks.dev" /></a>
 </p>
 
-**Live:** https://phantominfra-edge.matthewlooney5.workers.dev
 
 **Pre-revenue. Diligence-ready.** The asset is the runtime IP, Cloudflare reference edge, and acquirer-shaped adapters — not ARR.
 
