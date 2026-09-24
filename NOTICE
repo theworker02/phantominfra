@@ -1,0 +1,16 @@
+# NOTICE — Third-Party Software
+
+PhantomInfra first-party code is proprietary (see [LICENSE](./LICENSE)).
+
+This product may include or depend on third-party open-source packages installed via npm. Those packages remain under their respective licenses (commonly MIT, Apache-2.0, BSD, ISC, and similar). Review `package-lock.json` and each package’s `LICENSE` file under `node_modules/` for authoritative terms.
+
+Notable platform / toolchain categories:
+
+- Cloudflare Workers / wrangler tooling  
+- TypeScript, Node.js type definitions  
+- Vite / React (web demo app)  
+- Test runners and build utilities  
+
+No GPL/AGPL copyleft is intentionally introduced into first-party PhantomInfra packages. If a dependency’s license changes, treat `package-lock.json` as the pinned record for diligence.
+
+Trademark and product names of third parties belong to their respective owners.

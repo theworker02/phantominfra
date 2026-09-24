@@ -1,0 +1,26 @@
+{
+  "name": "@phantominfra/sdk",
+  "version": "1.4.2",
+  "license": "UNLICENSED",
+  "description": "PhantomInfra client SDK — sessions, speculation, agent plans.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@phantominfra/runtime": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@phantominfra/adapters",
+  "version": "1.4.2",
+  "license": "UNLICENSED",
+  "description": "Drop-in adapters for Cloudflare Workers, Vercel Edge, and Node — acquisition-fit integration surface.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@phantominfra/runtime": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

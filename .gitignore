@@ -1,0 +1,15 @@
+node_modules/
+dist/
+**/dist/
+*.local
+.DS_Store
+apps/web/dist/
+packages/*/dist/
+.vite/
+.wrangler/
+**/.wrangler/
+*.log
+.env
+.env.*
+apps/edge/.mf/
+**/.mf/

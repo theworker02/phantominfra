@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="PhantomInfra live demo animation">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8eef3"/>
+      <stop offset="100%" stop-color="#d5e0ea"/>
+    </linearGradient>
+    <style>
+      .ink { fill:#0c1420; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .title { font-family: Syne, Arial Black, Helvetica, sans-serif; font-weight:800; }
+      .signal { fill:#0d8f7a; }
+      .muted { fill:#4a5a6a; }
+      .panel { fill:rgba(255,255,255,.45); stroke:rgba(12,20,32,.12); }
+      .hit { opacity:0; animation: pop 6s ease-in-out infinite; }
+      .hit2 { opacity:0; animation: pop 6s ease-in-out 2s infinite; }
+      .hit3 { opacity:0; animation: pop 6s ease-in-out 4s infinite; }
+      .bar { transform-origin: left center; animation: grow 6s ease-in-out infinite; }
+      @keyframes pop { 0%,8%{opacity:0;transform:translateY(6px)} 14%,28%{opacity:1;transform:none} 36%,100%{opacity:0} }
+      @keyframes grow { 0%,10%{transform:scaleX(0)} 18%,30%{transform:scaleX(1)} 40%,100%{transform:scaleX(0)} }
+    </style>
+  </defs>
+  <rect width="800" height="420" fill="url(#g)"/>
+  <text class="ink title" x="40" y="64" font-size="36">PhantomInfra</text>
+  <text class="muted" x="40" y="92" font-size="14">predict ’ pre-execute ’ commit</text>
+
+  <rect class="panel" x="40" y="120" width="220" height="72" rx="0"/>
+  <text class="ink" x="56" y="148" font-size="13">CASE · CHECKOUT</text>
+  <text class="muted" x="56" y="172" font-size="12">checkout.confirm</text>
+
+  <rect class="panel" x="280" y="120" width="220" height="72" rx="0"/>
+  <text class="ink" x="296" y="148" font-size="13">BRANCHES OPEN</text>
+  <text class="muted" x="296" y="172" font-size="12">top-K COW workspace</text>
+
+  <rect class="panel" x="520" y="120" width="240" height="72" rx="0"/>
+  <text class="ink" x="536" y="148" font-size="13">CONFIRM</text>
+  <text class="muted" x="536" y="172" font-size="12">packet arrives</text>
+
+  <rect x="40" y="230" width="720" height="10" fill="rgba(12,20,32,.08)"/>
+  <rect class="bar signal" x="40" y="230" width="720" height="10"/>
+
+  <g class="hit">
+    <text class="title signal" x="40" y="300" font-size="42">HIT · 0ms</text>
+    <text class="muted" x="40" y="330" font-size="14">checkout.confirm committed from shadow branch</text>
+  </g>
+  <g class="hit2">
+    <text class="title signal" x="40" y="300" font-size="42">HIT · 0ms</text>
+    <text class="muted" x="40" y="330" font-size="14">cart.add · browse surface</text>
+  </g>
+  <g class="hit3">
+    <text class="title signal" x="40" y="300" font-size="42">HIT · 0ms</text>
+    <text class="muted" x="40" y="330" font-size="14">tools.charge · agent surface</text>
+  </g>
+
+  <text class="muted" x="40" y="390" font-size="12">Live: https://phantominfra-edge.matthewlooney5.workers.dev</text>
+</svg>

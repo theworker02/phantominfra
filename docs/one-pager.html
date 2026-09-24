@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PhantomInfra — Acquisition One-Pager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c1420;
+        --muted: #4a5a6a;
+        --signal: #0d8f7a;
+        --line: rgba(12, 20, 32, 0.14);
+        --bg: #eef3f7;
+      }
+      * { box-sizing: border-box; }
+      @page { size: letter; margin: 0.55in; }
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--bg);
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 10.5px;
+        line-height: 1.45;
+      }
+      .sheet {
+        max-width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto;
+        padding: 0.55in;
+        background:
+          radial-gradient(ellipse 80% 40% at 90% 0%, rgba(20, 184, 154, 0.12), transparent 55%),
+          #f7fafc;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Syne", sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        line-height: 0.95;
+      }
+      .tag {
+        margin: 0.55rem 0 0;
+        color: var(--signal);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .thesis {
+        margin: 1rem 0 0;
+        max-width: 6.2in;
+        font-size: 13px;
+        font-weight: 500;
+      }
+      .meta {
+        margin-top: 0.75rem;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 1.1rem;
+        margin-top: 1.35rem;
+      }
+      .block {
+        border-top: 1px solid var(--line);
+        padding-top: 0.7rem;
+      }
+      .block h2 {
+        margin: 0 0 0.45rem;
+        font-family: "Syne", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      .block p, .block li { color: var(--muted); }
+      .block ul { margin: 0.35rem 0 0; padding-left: 1.1rem; }
+      .block li { margin: 0.2rem 0; }
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.65rem;
+        margin-top: 0.55rem;
+      }
+      .stat {
+        border-top: 1px solid var(--line);
+        padding-top: 0.45rem;
+      }
+      .stat b {
+        display: block;
+        font-family: "Syne", sans-serif;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: var(--signal);
+        line-height: 1;
+      }
+      .stat span { color: var(--muted); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.35rem;
+      }
+      td {
+        padding: 0.28rem 0;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      td:first-child { font-weight: 500; width: 28%; color: var(--ink); }
+      td:last-child { color: var(--muted); }
+      .footer {
+        margin-top: 1.25rem;
+        padding-top: 0.7rem;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--muted);
+        font-size: 9.5px;
+      }
+      .footer strong { color: var(--ink); }
+      @media print {
+        body { background: white; }
+        .sheet { padding: 0; background: white; }
+        .no-print { display: none !important; }
+      }
+      .toolbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        padding: 0.75rem 1rem;
+        background: rgba(238, 243, 247, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .toolbar button, .toolbar a {
+        font: inherit;
+        font-size: 11px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.55rem 0.85rem;
+        border: 1px solid var(--ink);
+        background: var(--ink);
+        color: #eef3f7;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .toolbar a.ghost {
+        background: transparent;
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar no-print">
+      <a class="ghost" href="../README.md">Repo</a>
+      <button type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+    <article class="sheet">
+      <p class="tag">Pre-revenue · Proprietary · Diligence one-pager</p>
+      <h1>PhantomInfra</h1>
+      <p class="thesis">
+        Speculative zero-latency edge engine. Predict the next API or agent tool call,
+        pre-execute on a copy-on-write branch, commit at packet arrival — or roll back
+        with zero production side effects.
+      </p>
+      <p class="meta">
+        Status: working runtime + Cloudflare edge reference · Category: predictive compute /
+        speculative execution for backends
+      </p>
+
+      <div class="grid">
+        <div>
+          <section class="block">
+            <h2>Why this is valuable without revenue</h2>
+            <ul>
+              <li><strong>Category creation</strong> — not CDN cache. Speculative <em>mutations &amp; tool calls</em> with shadow/commit/compensate.</li>
+              <li><strong>Agent-era wedge</strong> — pre-run tools while the model is still planning.</li>
+              <li><strong>Buyer-shaped</strong> — adapters for Cloudflare Workers, Vercel Edge, Node/Lambda.</li>
+              <li><strong>Diligence-ready</strong> — whitepaper, threat model, OpenAPI, bench, audit export, CI.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Acquirer fit</h2>
+            <table>
+              <tr><td>Cloudflare</td><td>Workers + Durable Objects + KV — reference impl shipping</td></tr>
+              <tr><td>Vercel</td><td>Edge / Fluid via <code>@phantominfra/adapters</code></td></tr>
+              <tr><td>Fastly</td><td>Compute@Edge via fetch adapter pattern</td></tr>
+              <tr><td>AWS / Azure</td><td>Node adapter → Lambda / Functions warm path</td></tr>
+            </table>
+          </section>
+        </div>
+
+        <div>
+          <section class="block">
+            <h2>Measured demo proof</h2>
+            <div class="stats">
+              <div class="stat"><b>~0.1ms</b><span>Hit confirm</span></div>
+              <div class="stat"><b>~156ms</b><span>Cold miss</span></div>
+              <div class="stat"><b>~1500×</b><span>Approx speedup</span></div>
+              <div class="stat"><b>PROP</b><span>License</span></div>
+            </div>
+            <p style="margin: 0.65rem 0 0">Local bench: <code>npm run bench</code>. Production savings scale with handler cost × hit rate.</p>
+          </section>
+
+          <section class="block">
+            <h2>What’s in the box</h2>
+            <ul>
+              <li>Runtime: predict → COW speculate → commit/rollback</li>
+              <li>Shadow effects + compensate + policy + ledger</li>
+              <li>Edge: auth, rate limit, KV predictor mesh, SSE</li>
+              <li>Agent plan → tool speculation</li>
+              <li><code>exportAuditBundle()</code> for data rooms</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <section class="block" style="margin-top: 1.1rem">
+        <h2>Ask (non-binding)</h2>
+        <p>
+          Strategic acqui-hire / technology acquisition into an edge or agent runtime org.
+          Value is <strong>runtime IP + edge reference + acquirer adapters</strong> — not ARR.
+        </p>
+      </section>
+
+      <div class="footer">
+        <div>
+          <strong>github.com/theworker02</strong><br />
+          docs/ACQUISITION.md · docs/whitepaper.md · SECURITY.md
+        </div>
+        <div style="text-align: right">
+          <strong id="live-url">Live edge: see LIVE.md</strong><br />
+          OpenAPI: /openapi.json · Demo key: see LIVE.md
+        </div>
+      </div>
+    </article>
+    <script>
+      // Filled after deploy if LIVE.md is generated with a URL comment
+      fetch("./live-url.json")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((data) => {
+          if (data?.url) {
+            const el = document.getElementById("live-url");
+            el.innerHTML = `<strong>Live:</strong> ${data.url}`;
+          }
+        })
+        .catch(() => {});
+    </script>
+  </body>
+</html>

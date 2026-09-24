@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "phantominfra-edge",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "ALLOW_ANON": "true",
+    "API_KEYS": "dev_phantom_key"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "PREDICTOR_KV",
+      "id": "3cc4b23bb900423fae1ba9f827e000b7",
+      "preview_id": "3d12fdc2c8a243b2aab94d7650f3b0a9"
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "PHANTOM_SESSION",
+        "class_name": "PhantomSession"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["PhantomSession"]
+    }
+  ]
+}

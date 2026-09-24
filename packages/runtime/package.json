@@ -1,0 +1,29 @@
+{
+  "name": "@phantominfra/runtime",
+  "version": "1.4.2",
+  "license": "UNLICENSED",
+  "description": "Speculative execution runtime: predictors, COW workspaces, commit/rollback.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "demo": "tsx src/demo.ts",
+    "bench": "tsx src/bench.ts",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

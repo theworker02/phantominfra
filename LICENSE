@@ -1,0 +1,62 @@
+# PhantomInfra Proprietary License
+
+Copyright (c) 2026 theworker02. All rights reserved.
+
+## Summary
+
+PhantomInfra is **proprietary software**. It is **not** open source and is **not** licensed under MIT, Apache, GPL, or any OSI-approved license.
+
+Except as expressly permitted below or in a separate written agreement signed by the copyright holder, you may not use, copy, modify, merge, publish, distribute, sublicense, sell, or create derivative works of this software or its documentation.
+
+## 1. Evaluation / diligence use (limited grant)
+
+You may clone or access this repository and run the software **solely** for:
+
+1. Non-production evaluation and technical diligence;
+2. Reviewing architecture, security, and acquisition fitness;
+3. Exercising the public live demo at the published Workers URL;
+
+provided that you:
+
+- do not use the software in production or to process third-party customer data at scale;
+- do not remove proprietary notices;
+- do not redistribute the source (publicly or privately) except to your internal diligence team under confidentiality;
+- do not reverse engineer beyond what is reasonably necessary for evaluation, except where prohibited by law.
+
+The live public demo is offered “as is” under these evaluation terms.
+
+## 2. Commercial use
+
+Any commercial, production, SaaS, OEM, redistribution, or paid-service use requires a **separate commercial license** from the copyright holder.
+
+See:
+
+- [docs/LICENSE-COMMERCIAL.md](docs/LICENSE-COMMERCIAL.md) — commercial license framework
+- [docs/LICENSE-EVALUATION.md](docs/LICENSE-EVALUATION.md) — evaluation terms (detail)
+- [docs/ACQUISITION.md](docs/ACQUISITION.md) — acquisition / exclusive assignment path
+
+Contact: [@theworker02](https://github.com/theworker02)
+
+## 3. Acquisition / assignment
+
+Exclusive ownership transfer (copyright, trademarks as filed, trade secrets, and related IP) is available under a negotiated purchase agreement. See [docs/ASSIGNMENT.md](docs/ASSIGNMENT.md).
+
+## 4. Brand and trademarks
+
+“PhantomInfra”, the wordmark, and related brand assets in `brand/` are proprietary identity marks. No trademark license is granted except as needed to identify the software during authorized evaluation or under a commercial / acquisition agreement.
+
+## 5. Third-party components
+
+Third-party open-source dependencies retain their own licenses. See [NOTICE](NOTICE) and `node_modules` package metadata. This proprietary license applies only to first-party PhantomInfra code and documentation.
+
+## 6. Warranty disclaimer
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM USE OF THE SOFTWARE, WHETHER IN CONTRACT, TORT, OR OTHERWISE.
+
+## 7. Termination
+
+Any use outside this license or a signed commercial / acquisition agreement terminates the limited evaluation grant automatically. Upon termination you must cease use and destroy copies in your possession, except for materials retained solely for legal or archival obligations.
+
+---
+
+*This document is a licensing instrument for the PhantomInfra project. It is not formal legal advice. Parties should obtain counsel for definitive agreements.*

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PhantomInfra — Live Demo</title>
+  <meta name="description" content="Speculative zero-latency edge engine. Live demo on Cloudflare Workers." />
+  <meta property="og:title" content="PhantomInfra" />
+  <meta property="og:description" content="Predict · pre-execute · commit at ~0ms — or roll back." />
+  <meta property="og:image" content="./assets/wordmark.png" />
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#0c1420; --muted:#4a5a6a; --signal:#0d8f7a; --bg:#e8eef3; --line:rgba(12,20,32,.12); }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; font-family:"IBM Plex Mono",ui-monospace,monospace; color:var(--ink);
+      background: radial-gradient(ellipse 90% 50% at 80% 0%, rgba(20,184,154,.14), transparent 55%), linear-gradient(165deg,var(--bg),#d5e0ea);
+    }
+    main { max-width: 44rem; margin:0 auto; padding: 3.5rem 1.5rem 4rem; }
+    .wordmark { display:block; width:min(100%, 28rem); height:auto; margin:0 0 1rem; }
+    h1 { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+    .tag { color:var(--signal); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; margin:0 0 .75rem; }
+    .lede { color:var(--muted); font-size:.95rem; max-width:32rem; line-height:1.5; }
+    .cta {
+      display:inline-flex; margin-top:1.75rem; padding:.95rem 1.35rem; text-decoration:none;
+      background:var(--ink); color:var(--bg); font-size:.8rem; letter-spacing:.06em; text-transform:uppercase;
+    }
+    .cta.ghost { margin-left:.5rem; background:transparent; color:var(--ink); border:1px solid var(--line); }
+    .shot { display:block; width:100%; margin-top:2.25rem; border:1px solid var(--line); }
+    .loop { display:block; width:100%; margin-top:1.25rem; border:1px solid var(--line); background:rgba(255,255,255,.35); }
+    .links { margin-top:2rem; font-size:.78rem; color:var(--muted); line-height:1.8; }
+    .links a { color:var(--ink); }
+  </style>
+  <!-- Prefer the live Worker; this page is the GitHub Pages front door. -->
+</head>
+<body>
+  <main>
+    <p class="tag">v1.4.2 · Proprietary · GitHub Pages → live edge</p>
+    <h1>PhantomInfra</h1>
+    <img class="wordmark" src="./assets/wordmark.png" alt="PhantomInfra" width="720" height="160" />
+    <p class="lede">Speculative zero-latency edge engine. Predict the next call, pre-execute on a COW branch, commit at packet arrival — or roll back with zero side effects.</p>
+    <p>
+      <a class="cta" href="https://phantominfra-edge.matthewlooney5.workers.dev/">Open live demo</a>
+      <a class="cta ghost" href="https://phantominfra-edge.matthewlooney5.workers.dev/v1/proof">Live proof</a>
+      <a class="cta ghost" href="https://github.com/theworker02/phantominfra">GitHub</a>
+    </p>
+    <img class="shot" src="./assets/playground.png" alt="PhantomInfra live playground screenshot" width="1200" height="800" />
+    <img class="loop" src="./assets/demo-loop.svg" alt="Animated demo loop: predict, pre-execute, HIT at 0ms" width="800" height="420" />
+    <p class="links">
+      Diligence: <a href="./ACQUISITION.md">Acquisition</a> · <a href="./DATA-ROOM.md">Data room</a> · <a href="./IP.md">IP</a> · <a href="./ASSIGNMENT.md">Assignment</a> · <a href="../LICENSE">License</a><br/>
+      Licensing: <a href="./LICENSE-COMMERCIAL.md">Commercial</a> · <a href="./LICENSE-EVALUATION.md">Evaluation</a> · <a href="./PATENT-NOTICE.md">Patents</a><br/>
+      One-pager: <a href="./one-pager.html">Print / PDF</a> · Changelog: <a href="./CHANGELOG.md">1.4.2</a>
+    </p>
+  </main>
+</body>
+</html>
