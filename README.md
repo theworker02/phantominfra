@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="docs/logo.svg" alt="phantominfra official logo" width="128" height="128">
+</p>
+
+<p align="center">
   <img src="docs/assets/wordmark.png" alt="PhantomInfra" width="520" />
 </p>
 
